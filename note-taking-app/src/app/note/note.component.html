@@ -1,0 +1,22 @@
+<div class="note-container">
+    <h2>Note Taking App</h2>
+  
+    <!-- Note creation form -->
+    <div class="form-container">
+      <input [(ngModel)]="title" placeholder="Note Title" />
+      <textarea [(ngModel)]="content" placeholder="Note Content"></textarea>
+      <button (click)="addNote()">Add Note</button>
+    </div>
+  
+    <!-- Displaying the list of notes -->
+    <div class="notes-list">
+      <ul>
+        <li *ngFor="let note of notes; let i = index">
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.content }}</p>
+          <button (click)="deleteNote(i)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
