@@ -1,0 +1,8 @@
+<div>
+  <h2>Product: Amazing Widget</h2>
+  <p>Price: ${{ productPrice }}</p>
+  <p>Status: {{ productAvailability ? 'In Stock' : 'Out of Stock' }}</p>
+
+  <button (click)="updatePrice(120)">Update Price</button>
+  <button (click)="updateOrder({ orderId: 123, status: 'Shipped' })">Update Order</button>
+</div>
